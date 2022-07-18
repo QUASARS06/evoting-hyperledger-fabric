@@ -8,7 +8,7 @@ The proposed system includes a Hyperledger Fabric-based Permissioned Blockchain 
 
 The entire election process is divided into three phases - Registration Phase, Voting Phase & Tallying Phase. During the Registration Phase, eligible voters can register themselves onto the system to obtain an X.509 Certificate provided by an Admin from each Organization. The Blockchain is permissioned as only the admin can permit users to transact on the network via an MSP. During the Voting Phase, all the registered voters with a valid X.509 certificate are authorized to vote. The voter's identity is hashed and stored to provide anonymity, and the voting data is encrypted using Asymmetric Key Encryption to ensure the security of the data. During the Tally Phase, the Elections results are determined by special Administrators registered on the network.
 
-###Innovation
+### Innovation
 Most Blockchain-based Applications are Permissionless, e.g., Bitcoin, which allows anyone to participate in the network in the capacity of a full node or as a contributing miner. Our Proposed Network is a Permissioned Blockchain where Membership Service Providers issue users X.509 Certificates to carry out certain operations on the network depending on the type of Role authorized to them. Hence there are no anonymous or pseudonymous users.
 
 We have designed a voting procedure that hashes and encrypts the User's voting information, thus maintaining the voter's anonymity. The voter can even verify his voting information after voting. The X.509 certificate information is validated in the Smart Contracts and the Network Backend to prevent MiTM attacks.
@@ -17,5 +17,5 @@ The network is highly scalable and modular because there is no POW algorithm and
 
 Our proposed system fulfills all the objectives proposed in Article 324 as set out by the Election Commission of India for the voting procedure to be considered free and fair.
 
-###Results
+### Results
 The Average Read Latency obtained was 0.152 secs, and the Average Read Throughput was 399.98 transactions per minute (TPM). The Average Transaction Latency obtained was 0.221 secs, and the Average Transaction Throughput was 271.53  transactions per minute (TPM). We performed Load Testing on our network, and our Single Node Server could handle 400 concurrent transactions successfully.
