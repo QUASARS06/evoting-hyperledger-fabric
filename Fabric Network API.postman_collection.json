@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "1f15c90d-d558-48fe-908a-77c68d7998a4",
+		"name": "Fabric Network API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"lion\",\n\t\"orgName\": \"Org1\"\n}\t"
+				},
+				"url": {
+					"raw": "http://localhost:4000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"quasars\",\n\t\"orgName\": \"Org1\"\n}\t"
+				},
+				"url": {
+					"raw": "http://localhost:4000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vote Car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzU4ODk4MzUsInVzZXJuYW1lIjoiY2hpcmFnIiwib3JnTmFtZSI6Ik9yZzIiLCJpYXQiOjE2MzU4NTM4MzV9.CpysVJYtXrXFiVOlx6afrAqixljiZxLNd2GN5Qnmam8",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fcn\": \"voteCar\",\n    \"peers\": [\"peer0.org1.example.com\",\"peer0.org2.example.com\"],\n    \"chaincodeName\":\"fabcar\",\n    \"channelName\": \"mychannel\",\n    \"args\": [\"SS\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/fabcar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"fabcar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Votes CLIENT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/fabcar?args=[]&peer=peer0.org1.example.com&fcn=getAllVotesClient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"fabcar"
+					],
+					"query": [
+						{
+							"key": "args",
+							"value": "[]"
+						},
+						{
+							"key": "peer",
+							"value": "peer0.org1.example.com"
+						},
+						{
+							"key": "fcn",
+							"value": "getAllVotesClient"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Vote By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/fabcar?args=[]&peer=peer0.org1.example.com&fcn=queryVoteById",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"fabcar"
+					],
+					"query": [
+						{
+							"key": "args",
+							"value": "[]"
+						},
+						{
+							"key": "peer",
+							"value": "peer0.org1.example.com"
+						},
+						{
+							"key": "fcn",
+							"value": "queryVoteById"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query All Votes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/fabcar?args=[]&peer=peer0.org1.example.com&fcn=queryAllVotes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"fabcar"
+					],
+					"query": [
+						{
+							"key": "args",
+							"value": "[]"
+						},
+						{
+							"key": "peer",
+							"value": "peer0.org1.example.com"
+						},
+						{
+							"key": "fcn",
+							"value": "queryAllVotes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Phase",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/fabcar?args=[]&peer=peer0.org1.example.com&fcn=queryPhase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"fabcar"
+					],
+					"query": [
+						{
+							"key": "args",
+							"value": "[]"
+						},
+						{
+							"key": "peer",
+							"value": "peer0.org1.example.com"
+						},
+						{
+							"key": "fcn",
+							"value": "queryPhase"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Phase",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzU4ODk4MzUsInVzZXJuYW1lIjoiY2hpcmFnIiwib3JnTmFtZSI6Ik9yZzIiLCJpYXQiOjE2MzU4NTM4MzV9.CpysVJYtXrXFiVOlx6afrAqixljiZxLNd2GN5Qnmam8",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fcn\": \"changePhase\",\n    \"peers\": [\"peer0.org1.example.com\",\"peer0.org2.example.com\"],\n    \"chaincodeName\":\"fabcar\",\n    \"channelName\": \"mychannel\",\n    \"args\": [\"voting\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/fabcar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"fabcar"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODUyMzE1ODgsInVzZXJuYW1lIjoicGF2YW4xIiwib3JnTmFtZSI6Ik9yZzEiLCJpYXQiOjE1ODUxOTU1ODh9.yfxyVPQWH_eKPKY51sUsB5slOW9XNrOwmU0g_5aAuhQ"
+		}
+	]
+}
